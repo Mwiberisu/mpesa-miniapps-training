@@ -1,0 +1,14 @@
+body{
+    background-color: cornsilk;
+}
+#special{
+    color: purple;
+}
+.list{
+    font-weight: 600;
+
+}
+img{
+     height: 200px;
+     width: 200px;
+}
