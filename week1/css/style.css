@@ -1,14 +1,25 @@
-body{
+body {
     background-color: cornsilk;
+    text-align:center;
 }
-#special{
+
+#special {
     color: purple;
 }
-.list{
-    font-weight: 600;
+
+.list {
+    font-weight: 100;
+    text-align: left;
+    display: inline-block;
 
 }
-img{
-     height: 200px;
-     width: 200px;
+
+img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+h3 {
+    text-decoration: underline;
 }
