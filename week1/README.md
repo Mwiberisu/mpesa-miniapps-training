@@ -13,7 +13,7 @@ portfolio.html
 ```
 
 ## Live Site
-Link: https://github.com/Mwiberisu/
+Link: https://mwiberisu.github.io/mpesa-miniapps-training/week1/portfolio.html
 
 ## Author
 [github/Mwiberisu](https://github.com/Mwiberisu)
