@@ -5,6 +5,7 @@ body {
 
 #special {
     color: purple;
+    font-style: italic;
 }
 
 .list {
@@ -22,5 +23,4 @@ img {
 
 h3 {
     text-decoration: underline;
-    font-style: italic;
 }
