@@ -81,7 +81,7 @@ let message6 = "XXXYYYZZZ6 Confirmed.on 23/4/21 at 12:31 PMWithdraw Ksh1,500.00 
 let message7 = "XXXYYYZZZ8 Confirmed. Ksh700.00 paid to GEL NAIL SHOP. on 17/3/21 at 6:54 PM.New M-PESA balance is Ksh3,646.22. Transaction cost, Ksh0.00. Amount you can transact within the day is 299,300.00.You can now access M-PESA via *334#";
 let message8 = "XXXYYYZZZ9 Confirmed. On 25/7/20 at 3:29 PM Give Ksh2,000.00 cash to Agent fulani New M-PESA balance is Ksh2,100.22.";
 
-var getMessage = (function (message) {
+let getMessage = (function (message) {
     if (message.includes("sent to") && message.includes("for account")) {
         console.log("PAYBILL MESSAGE: " + message);
 
