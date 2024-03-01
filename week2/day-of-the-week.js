@@ -1,4 +1,4 @@
-const akanFemaleName = {
+const akanFemaleNames = {
     "Sunday": "Akosua",
 
     "Monday": "Adwoa",
@@ -29,20 +29,20 @@ const akanMaleNames = {
 
     "Saturday": "Kwame"
 }
-const DayOfWeekIndex = {
-    1: "Sunday",
+const dayOfWeekIndex = {
+    0: "Sunday",
 
-    2: "Monday",
+    1: "Monday",
 
-    3: "Tuesday",
+    2: "Tuesday",
 
-    4: "Wednesday",
+    3: "Wednesday",
 
-    5: "Thursday",
+    4: "Thursday",
 
-    6: "Friday",
+    5: "Friday",
 
-    7: "Saturday"
+    6: "Saturday"
 
 }
 
@@ -55,15 +55,30 @@ function calculateDayOfWeek(birthday, gender) {
     // DD - is the Day of the month 
     // mod - is the modulus function ( % )
     // Function to use: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
-    const year =birthday.getFullYear().toString();
-    const CC = year.substring(0,2);
-    const YY = year.substring(2,4);
-    const MM = birthday.getMonth();
-    const DD = birthday.getDate();
+    console.log("Date received", birthday);
+    // const year = birthday.getFullYear().toString();
+    // const CC = year.substring(0, 2);
+    // const YY = year.substring(2, 4);
+    // const MM = birthday.getMonth();//getMonth runs from 0-11, so add 1 to get the month
+    // const DD = birthday.getDate();
 
-    const dayOfWeek =( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) % 7;
-    console.log("Year: " +year + " CC: " + CC + " YY: " + YY+" MM: " + MM + " DD: " + DD + " dayofweek: " + dayOfWeek);
+    // const dayOfWeekNo = parseInt((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);//converts to a ---number doesnt work
+    // console.log("Year: " + year + " CC: " + CC + " YY: " + YY + " MM: " + MM + " DD: " + DD + " dayofweekNo: " + dayOfWeekNo+" dayofweek: " + dayOfWeekIndex[dayOfWeekNo]);
+
+    const day = birthday.getDay();
+    const dayOftheWeekValue = dayOfWeekIndex[day];
+    console.log("Day of the year:", day,"dayOftheWeekValue",dayOftheWeekValue)
+
+    let personName = "";
+    if(gender == "female"){
+        personName = akanFemaleNames[dayOftheWeekValue];
+    }
+    else{
+        personName = akanMaleNames[dayOftheWeekValue];
+    }
+
+    console.log("Your Akan name is", personName);
 
 }
 
-calculateDayOfWeek(new Date(1994, 11, 13), "female");
+calculateDayOfWeek(new Date("2024-03-01"), "male");
