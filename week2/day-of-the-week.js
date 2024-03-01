@@ -70,15 +70,19 @@ function calculateDayOfWeek(birthday, gender) {
     console.log("Day of the year:", day,"dayOftheWeekValue",dayOftheWeekValue)
 
     let personName = "";
-    if(gender == "female"){
+    if(gender.toLowerCase() == "female"){
         personName = akanFemaleNames[dayOftheWeekValue];
     }
-    else{
+    else if(gender.toLowerCase() == "male"){
         personName = akanMaleNames[dayOftheWeekValue];
     }
+    else{
+        console.log("Unknown gender:", gender);
+    }
+
 
     console.log("Your Akan name is", personName);
 
 }
 
-calculateDayOfWeek(new Date("2024-03-01"), "male");
+calculateDayOfWeek(new Date("2024-03-01"), "malle");
