@@ -1,0 +1,11 @@
+body {
+    background-color:aliceblue;
+    text-align: center;
+
+
+}
+
+label{
+    display: list-item;
+    text-align: center;
+}
