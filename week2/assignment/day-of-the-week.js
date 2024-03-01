@@ -46,7 +46,7 @@ const dayOfWeekIndex = {
 
 }
 
-function calculateDayOfWeek(birthday, gender) {
+function calculateAkanName(birthday, gender) {
     // confirm date is valid
     // format date to ddmmyyyy
     // CC - is the century digits. For example 1989 has CC = 19
