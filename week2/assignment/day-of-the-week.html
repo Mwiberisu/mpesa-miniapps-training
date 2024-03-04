@@ -10,15 +10,16 @@
 <body>
     <h1></h1>
     <form>
+        alert
         <label for="birthday">Enter your birthday</label>
-        <input type="date">
+        <input type="date" id="birthday">
         <label for="gender">Choose your gender</label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" >
             <option value="female">FEMALE</option>
             <option value="male">MALE</option>
         </select>
-        <input type="button" value="submit" onclick="calculateAkanName()">
+        <input type="button" value="submit" onclick="calculateAkanName(document.getElementById('birthday').value, document.getElementById('gender').value)">
     </form>
     
 </body>
-</html>
+</html

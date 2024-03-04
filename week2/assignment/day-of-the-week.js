@@ -56,6 +56,14 @@ function calculateAkanName(birthday, gender) {
     // mod - is the modulus function ( % )
     // Function to use: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
     console.log("Date received", birthday);
+    console.log("Gender received", gender);
+    if(birthday ==null){
+        return "Please select your birthday";
+    }
+
+    if(birthday ==null){
+        console.log("Please select a gender from the list");
+    }
     // const year = birthday.getFullYear().toString();
     // const CC = year.substring(0, 2);
     // const YY = year.substring(2, 4);
@@ -85,4 +93,4 @@ function calculateAkanName(birthday, gender) {
 
 }
 
-calculateDayOfWeek(new Date("2024-03-01"), "malle");
+calculateAkanName(new Date("2024-03-01"), "malle");
