@@ -55,7 +55,7 @@ function calculateAkanName(dateString, gender) {
     // DD - is the Day of the month 
     // mod - is the modulus function ( % )
     // Function to use: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
-     // const year = birthday.getFullYear().toString();
+    // const year = birthday.getFullYear().toString();
     // const CC = year.substring(0, 2);
     // const YY = year.substring(2, 4);
     // const MM = birthday.getMonth();//getMonth runs from 0-11, so add 1 to get the month
@@ -66,41 +66,52 @@ function calculateAkanName(dateString, gender) {
     let response = "";
     console.log("Date received", dateString);
     console.log("Gender received", gender);
-    if(isInvalidDate(dateString)){
+
+    const birthday = new Date(dateString)
+    birthday
+    console.log("IsValidDate", birthday.isValid());
+    if (birthday.isValid() != true) {
         response = "Please select your birthday";
     }
 
-    if(gender == null){
+    else if (gender == null) {
         response = "Please select a gender from the list";
-    }
-    const birthday = new Date(dateString)
 
-   
+    } else {
 
-    const day = birthday.getDay();
-    const dayOftheWeekValue = dayOfWeekIndex[day];
-    console.log("Day of the year:", day,"dayOftheWeekValue",dayOftheWeekValue)
 
-    let personName = "";
-    if(gender.toLowerCase() == "female"){
-        personName = akanFemaleNames[dayOftheWeekValue];
-    }
-    else if(gender.toLowerCase() == "male"){
-        personName = akanMaleNames[dayOftheWeekValue];
-    }
-    else{
-        response = "Unknown gender:", gender;
-    }
+        const day = birthday.getDay();
+        const dayOftheWeekValue = dayOfWeekIndex[day];
+        console.log("Day of the year:", day, "dayOftheWeekValue", dayOftheWeekValue)
 
-    response = "Your Akan name is "+ personName;
+        let personName = "";
+
+        if (gender.toLowerCase() == "female") {
+            personName = akanFemaleNames[dayOftheWeekValue];
+            response = "Your Akan name is " + personName;
+        }
+        else if (gender.toLowerCase() == "male") {
+            personName = akanMaleNames[dayOftheWeekValue];
+            response = "Your Akan name is " + personName;
+        }
+        else {
+            response = "Unknown gender:", gender;
+        }
+
+    }
     console.log(response);
 
     document.getElementById("response").innerHTML = response;
 
 }
 
-const isInvalidDate = value =>
-  value instanceof Date && Number.isNaN(value.getTime());
+Date.prototype.isValid = function () {
+ 
+    // If the date object is invalid it
+    // will return 'NaN' on getTime()
+    // and NaN is never equal to itself
+    return this.getTime() === this.getTime();
+};
 
 // test the function
 // calculateAkanName(new Date("2024-03-01"), "malle");
