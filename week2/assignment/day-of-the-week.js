@@ -103,6 +103,7 @@ function calculateAkanName(dateString, gender) {
 
     document.getElementById("response").innerHTML = response;
     document.getElementById("error").innerHTML = error;
+    document.getElementById("akanForm").reset();
 
 }
 
