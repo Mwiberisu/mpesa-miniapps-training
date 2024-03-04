@@ -46,7 +46,8 @@ const dayOfWeekIndex = {
 
 }
 
-function calculateAkanName(birthday, gender) {
+function calculateAkanName(dateString, gender) {
+    let response = "";
     // confirm date is valid
     // format date to ddmmyyyy
     // CC - is the century digits. For example 1989 has CC = 19
@@ -55,15 +56,17 @@ function calculateAkanName(birthday, gender) {
     // DD - is the Day of the month 
     // mod - is the modulus function ( % )
     // Function to use: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
-    console.log("Date received", birthday);
+    console.log("Date received", dateString);
     console.log("Gender received", gender);
-    if(birthday ==null){
-        return "Please select your birthday";
+    if(isInvalidDate(dateString)){
+        response = "Please select your birthday";
     }
 
-    if(birthday ==null){
-        console.log("Please select a gender from the list");
+    if(gender == null){
+        response = "Please select a gender from the list";
     }
+    const birthday = new Date(dateString)
+
     // const year = birthday.getFullYear().toString();
     // const CC = year.substring(0, 2);
     // const YY = year.substring(2, 4);
@@ -85,12 +88,18 @@ function calculateAkanName(birthday, gender) {
         personName = akanMaleNames[dayOftheWeekValue];
     }
     else{
-        console.log("Unknown gender:", gender);
+        response = "Unknown gender:", gender;
     }
 
+    response = "Your Akan name is "+ personName;
+    console.log(personName, response);
 
-    console.log("Your Akan name is", personName);
+    document.getElementById("response").innerHTML = response;
 
 }
 
-calculateAkanName(new Date("2024-03-01"), "malle");
+const isInvalidDate = value =>
+  value instanceof Date && Number.isNaN(value.getTime());
+
+// test the function
+// calculateAkanName(new Date("2024-03-01"), "malle");
