@@ -88,11 +88,10 @@ function calculateAkanName(dateString, gender) {
 
         if (gender.toLowerCase() == "female") {
             personName = akanFemaleNames[dayOftheWeekValue];
-            response = "Your Akan name is " + personName;
-        }
+            response = "You were born on a <strong>"+dayOftheWeekValue+"</strong>. Your Akan name is <strong>" + personName+"</strong";        }
         else if (gender.toLowerCase() == "male") {
             personName = akanMaleNames[dayOftheWeekValue];
-            response = "Your Akan name is " + personName;
+            response = "You were born on a <strong>"+dayOftheWeekValue+"</strong>. Your Akan name is <strong>" + personName+"</strong";
         }
         else {
             error = "Unknown gender:", gender;
