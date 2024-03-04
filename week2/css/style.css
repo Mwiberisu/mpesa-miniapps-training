@@ -1,21 +1,28 @@
 body {
-    background-color:aliceblue;
+    background-color: aliceblue;
     text-align: center;
-
+    color: blueviolet;
 
 }
 
-label{
+label {
     display: list-item;
     text-align: center;
 }
-p{
+
+p {
     font-style: italic;
 }
-#response{
+
+#response {
     color: forestgreen;
 }
-#error{
+
+#error {
     color: red;
 
+}
+
+input[type="date"], select{
+    background-color:magenta;
 }
