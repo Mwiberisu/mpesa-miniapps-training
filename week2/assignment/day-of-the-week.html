@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,36 @@
     <link rel="stylesheet" href="../css/style.css">
     <script src="day-of-the-week.js"></script>
 </head>
+
 <body>
-    <h1></h1>
-    <form>
-        <label for="birthday">Enter your birthday</label>
-        <input type="date" id="birthday">
-        <label for="gender">Choose your gender</label>
-        <select name="gender" id="gender" >
-            <option value="female">FEMALE</option>
-            <option value="male">MALE</option>
-        </select>
-        <input type="button" value="submit" onclick="calculateAkanName(document.getElementById('birthday').value, document.getElementById('gender').value) ">
-        <p id="response"></p>
-        <p id="error"></p>
-    </form>
-    
+
+    <div>
+        <h1>Know Your Akan Name</h1>
+        <p>How is Akan name determined? Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. eg Sunday</p>
+        <p>To know know your Akan name, select your birthday below and gender:</p>
+        <form>
+            <div>
+                <label for="birthday">Enter your birthday: </label>
+                <input type="date" id="birthday">
+            </div>
+
+            <div><label for="gender">Choose your gender: </label>
+                <select name="gender" id="gender">
+                    <option value="female">FEMALE</option>
+                    <option value="male">MALE</option>
+                </select>
+            </div>
+            <div><input type="button" value="submit"
+                    onclick="calculateAkanName(document.getElementById('birthday').value, document.getElementById('gender').value) ">
+            </div>
+
+            <div>
+                <p id="response"></p>
+                <p id="error"></p>
+            </div>
+        </form>
+    </div>
+
 </body>
+
 </html
