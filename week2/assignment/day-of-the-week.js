@@ -47,7 +47,6 @@ const dayOfWeekIndex = {
 }
 
 function calculateAkanName(dateString, gender) {
-    let response = "";
     // confirm date is valid
     // format date to ddmmyyyy
     // CC - is the century digits. For example 1989 has CC = 19
@@ -56,6 +55,15 @@ function calculateAkanName(dateString, gender) {
     // DD - is the Day of the month 
     // mod - is the modulus function ( % )
     // Function to use: Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7
+     // const year = birthday.getFullYear().toString();
+    // const CC = year.substring(0, 2);
+    // const YY = year.substring(2, 4);
+    // const MM = birthday.getMonth();//getMonth runs from 0-11, so add 1 to get the month
+    // const DD = birthday.getDate();
+
+    // const dayOfWeekNo = parseInt((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);//converts to a ---number doesnt work
+    // console.log("Year: " + year + " CC: " + CC + " YY: " + YY + " MM: " + MM + " DD: " + DD + " dayofweekNo: " + dayOfWeekNo+" dayofweek: " + dayOfWeekIndex[dayOfWeekNo]);
+    let response = "";
     console.log("Date received", dateString);
     console.log("Gender received", gender);
     if(isInvalidDate(dateString)){
@@ -67,14 +75,7 @@ function calculateAkanName(dateString, gender) {
     }
     const birthday = new Date(dateString)
 
-    // const year = birthday.getFullYear().toString();
-    // const CC = year.substring(0, 2);
-    // const YY = year.substring(2, 4);
-    // const MM = birthday.getMonth();//getMonth runs from 0-11, so add 1 to get the month
-    // const DD = birthday.getDate();
-
-    // const dayOfWeekNo = parseInt((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);//converts to a ---number doesnt work
-    // console.log("Year: " + year + " CC: " + CC + " YY: " + YY + " MM: " + MM + " DD: " + DD + " dayofweekNo: " + dayOfWeekNo+" dayofweek: " + dayOfWeekIndex[dayOfWeekNo]);
+   
 
     const day = birthday.getDay();
     const dayOftheWeekValue = dayOfWeekIndex[day];
@@ -92,7 +93,7 @@ function calculateAkanName(dateString, gender) {
     }
 
     response = "Your Akan name is "+ personName;
-    console.log(personName, response);
+    console.log(response);
 
     document.getElementById("response").innerHTML = response;
 

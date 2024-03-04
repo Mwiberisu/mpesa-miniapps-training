@@ -9,3 +9,7 @@ label{
     display: list-item;
     text-align: center;
 }
+p{
+    font-style: italic;
+    color: forestgreen;
+}
