@@ -5,7 +5,8 @@ body {
 
 }
 h1{
-    text-decoration: underline;
+    text-decoration:underline wavy;
+    font-weight: 400;
 }
 
 label {
