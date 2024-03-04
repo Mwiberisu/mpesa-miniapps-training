@@ -11,5 +11,11 @@ label{
 }
 p{
     font-style: italic;
+}
+#response{
     color: forestgreen;
+}
+#error{
+    color: red;
+
 }

@@ -64,6 +64,7 @@ function calculateAkanName(dateString, gender) {
     // const dayOfWeekNo = parseInt((((CC / 4) - 2 * CC - 1) + ((5 * YY / 4)) + ((26 * (MM + 1) / 10)) + DD) % 7);//converts to a ---number doesnt work
     // console.log("Year: " + year + " CC: " + CC + " YY: " + YY + " MM: " + MM + " DD: " + DD + " dayofweekNo: " + dayOfWeekNo+" dayofweek: " + dayOfWeekIndex[dayOfWeekNo]);
     let response = "";
+    let error = "";
     console.log("Date received", dateString);
     console.log("Gender received", gender);
 
@@ -71,14 +72,13 @@ function calculateAkanName(dateString, gender) {
     birthday
     console.log("IsValidDate", birthday.isValid());
     if (birthday.isValid() != true) {
-        response = "Please select your birthday";
+        error = "Please select your birthday";
     }
 
     else if (gender == null) {
-        response = "Please select a gender from the list";
+        error = "Please select a gender from the list";
 
     } else {
-
 
         const day = birthday.getDay();
         const dayOftheWeekValue = dayOfWeekIndex[day];
@@ -95,18 +95,20 @@ function calculateAkanName(dateString, gender) {
             response = "Your Akan name is " + personName;
         }
         else {
-            response = "Unknown gender:", gender;
+            error = "Unknown gender:", gender;
         }
 
     }
     console.log(response);
+    console.log(error);
 
     document.getElementById("response").innerHTML = response;
+    document.getElementById("error").innerHTML = error;
 
 }
 
 Date.prototype.isValid = function () {
- 
+
     // If the date object is invalid it
     // will return 'NaN' on getTime()
     // and NaN is never equal to itself
