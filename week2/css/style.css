@@ -6,7 +6,7 @@ body {
 }
 h1{
     text-decoration:underline wavy;
-    font-weight: 400;
+    font-weight: 100;
 }
 
 label {
@@ -35,10 +35,12 @@ select {
 }
 
 div {
-    border: 2px solid magenta;
+    border: 1px;
     border-radius: 25px;
-    padding: 50px;
+    padding: 20px;
     margin: 20px;
+    display:block;
+
 
 }
 
@@ -50,3 +52,20 @@ input[type="button"] {
     font-size: large;
 
 }
+  
+  .div-container {
+    display: flex;
+    background-color: #F0FFFF;
+    gap: 20px;
+    justify-content: center;
+    text-align: justify;
+  }
+  
+  .class-div-1 {
+    background-color:lightblue;
+    
+  }
+  
+  .class-div-2 {
+    background-color: pink;
+  }
