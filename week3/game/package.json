@@ -1,0 +1,23 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "A simple game to learn npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mwiberisu/mpesa-miniapps-training.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Susan Mwiberi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mwiberisu/mpesa-miniapps-training/issues"
+  },
+  "homepage": "https://github.com/Mwiberisu/mpesa-miniapps-training#readme"
+}
