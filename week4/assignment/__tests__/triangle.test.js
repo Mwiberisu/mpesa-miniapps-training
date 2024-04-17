@@ -27,4 +27,7 @@ describe("Triangle Tests", () => {
   test("should correctly determine whether three lengths make an equilateral triangle", () => {
     expect(reusableTriangle.checkType()).toEqual("equilateral triangle");
   });
+  test("should correctly determine whether the triangle is big or little", () => {
+    expect(reusableTriangle.isBigTriangle()).toEqual("big");
+  });
 });
