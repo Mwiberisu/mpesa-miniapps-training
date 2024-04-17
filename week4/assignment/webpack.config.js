@@ -9,7 +9,9 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
   },
   plugins: [
-    new CleanWebpackPlugin(),
+    new CleanWebpackPlugin({
+      verbose: true,
+    }),
     new HtmlWebpackPlugin({
       title: "Shape Tracker",
       template: "./src/index.html",
