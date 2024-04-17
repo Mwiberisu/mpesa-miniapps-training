@@ -26,6 +26,8 @@
   },
   "homepage": "https://github.com/Mwiberisu/mpesa-miniapps-training#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.5",
+    "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
     "eslint": "^8.42.0",
