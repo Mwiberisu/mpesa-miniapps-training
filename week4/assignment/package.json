@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/Mwiberisu/mpesa-miniapps-training#readme",
   "devDependencies": {
+    "css-loader": "^6.8.1",
+    "style-loader": "^3.3.0",
     "webpack": "5.91.0",
     "webpack-cli": "^5.1.4"
   }
