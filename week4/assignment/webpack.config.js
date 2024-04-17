@@ -8,6 +8,12 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
   },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+  }, //
+  devtool: "eval-source-map",
   plugins: [
     new CleanWebpackPlugin({
       verbose: true,
