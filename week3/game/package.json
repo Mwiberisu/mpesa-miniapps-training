@@ -1,0 +1,33 @@
+{
+  "name": "game",
+  "version": "1.0.0",
+  "description": "A simple game to learn npm",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve --open --mode=development",
+    "build": "npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mwiberisu/mpesa-miniapps-training.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "Susan Mwiberi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mwiberisu/mpesa-miniapps-training/issues"
+  },
+  "homepage": "https://github.com/Mwiberisu/mpesa-miniapps-training#readme",
+  "devDependencies": {
+    "css-loader": "^6.10.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  },
+  "dependencies": {
+    "style-loader": "^3.3.4"
+  }
+}
