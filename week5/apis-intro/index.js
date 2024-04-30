@@ -4,7 +4,7 @@ app.use(express.json())
 
 app.get('/', function (req, res) {
   console.log("heyy!");
-  res.send('Hello World')
+  res.send('Hello '+ req.query.name)
 })
 
 app.post('/intro', function (req, res) {
