@@ -4,7 +4,7 @@ app.use(express.json())
 
 app.get('/', function (req, res) {
   console.log("heyy!");
-  res.send('Hello '+ req.query.name)
+  res.json({message:'Hello '+ req.query.name+' from IP: '+req.ip})
 })
 
 app.post('/intro', function (req, res) {
