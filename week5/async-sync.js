@@ -4,7 +4,7 @@ function fetchDataFromServer() {
         setTimeout(()=> {const fetchedData = "This is the data that was fetched from the server";
         resolve(fetchedData);
 
-        reject(new Error("There was an error fetching the data from the server") );},20000);
+        reject(new Error("There was an error fetching the data from the server") );},2000);
     })
 }
 
@@ -19,7 +19,7 @@ function logIn() {
         resolve(fetchedData);
 
         reject(new Error("There was an error fetching the data from the server") );
-    },20000);
+    },2000);
     })
 }
 
@@ -30,8 +30,23 @@ function getMessages() {
         resolve(fetchedData);
 
         reject(new Error("There was an error fetching the data from the server") );
-    },20000);
+    },2000);
     })
 }
 
-logIn().then((user) => {console.log('Logged in user', user); return getMessages(user.id)}).catch((error) => {console.error(error)}).then((messages) =>{console.log("user messages", messages); });
+// logIn().then((user) => {console.log('Logged in user', user); return getMessages(user.id)}).catch((error) => {console.error(error)}).then((messages) =>{console.log("user messages", messages); });
+
+function payDay(employeeId, timeout) {
+    console.log('Initiating pay for employee', employeeId);
+    return new Promise((resolve, reject) => {
+        setTimeout(()=> {const result = employeeId+' You just got paid';
+        resolve(result);
+    },timeout);
+    })
+}
+
+const employee1 = payDay(1, 2000);
+const employee2 = payDay(2, 3000);
+const employee3 = payDay(3, 1000);
+
+Promise.all([employee1, employee2, employee3]).then((results) => {console.log(results);});//all must work
