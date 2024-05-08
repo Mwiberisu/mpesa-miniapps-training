@@ -21,3 +21,10 @@ li {
   color: magenta;
   font-weight: bold;
 }
+button {
+  border: 2px solid magenta;
+  border-radius: 15px;
+  width: 10%;
+  padding: 15px 25px;
+  box-shadow: 0 9px #999;
+}
