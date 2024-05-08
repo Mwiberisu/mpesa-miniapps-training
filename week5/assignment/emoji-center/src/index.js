@@ -1,3 +1,5 @@
+import "../css/style.css";
+
 let categories = [
   "smileys-and-people",
   "animals-and-nature",
@@ -12,11 +14,11 @@ let categories = [
 async function getEmojiByCategory(category) {
   console.log("Fetching emojis for category: ", category);
   try {
-    const url = "https://emojihub.yurace.pro/api/all/category/";
+    const url = process.env.EMOJIHUB_URL;
     const response = await fetch(url + category);
     const status = response.status;
     console.log("Status returned: ", status);
-    body = await response.json();
+    const body = await response.json();
 
     return { status: status, data: body };
   } catch (error) {

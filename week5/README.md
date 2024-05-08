@@ -8,11 +8,14 @@ This is a simple application that display emojis. It queries the emojis from Emo
 
 1. Clone this repository.
 2. Navigate to the folder where the repo is cloned, and open week5/assignment/emoji-center folder
-3. Open the file below in your browser
+3. Run the following commands
 
 ```bash
-index.html
+1. npm install
+2. npm run start
 ```
+
+4. The service should start automatically and a page with emojis opened on you default browser
 
 ## Author
 
