@@ -1,0 +1,12 @@
+.div-container {
+    display: flex;
+    background-color: #F0FFFF;
+    gap: 20px;
+    justify-content: center;
+    text-align: justify;
+}
+
+.class-div-1 {
+    background-color: lightblue;
+
+}
