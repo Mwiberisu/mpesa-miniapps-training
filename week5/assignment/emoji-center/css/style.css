@@ -1,12 +1,33 @@
+body {
+  background-color: whitesmoke;
+  text-align: center;
+  color: darkviolet;
+}
+div {
+  border: 1px;
+  border-radius: 25px;
+  padding: 10px;
+  margin: 10px;
+  display: block;
+}
+
 .div-container {
-    display: flex;
-    background-color: #F0FFFF;
-    gap: 20px;
-    justify-content: center;
-    text-align: justify;
+  display: flex;
+  background-color: #f0ffff;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
 }
 
 .class-div-1 {
-    background-color: lightblue;
-
+  background-color: lightblue;
+}
+li {
+  display: block;
+  width: 10%;
+  float: left;
+}
+#error {
+  color: magenta;
+  font-weight: bold;
 }
