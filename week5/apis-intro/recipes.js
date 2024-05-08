@@ -63,4 +63,4 @@ async function loadAndFetchRecipes() {
   }
 }
 
-window.onload = loadAndFetchRecipes();
+// window.onload = loadAndFetchRecipes();
