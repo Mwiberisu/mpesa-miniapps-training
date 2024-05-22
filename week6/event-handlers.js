@@ -1,4 +1,4 @@
-const mathOperrational = {
+const mathOperations = {
   add: (a, b) => a + b,
   subtract: (a, b) => a - b,
   multply: (a, b) => a * b,
@@ -9,8 +9,8 @@ const mathOperrational = {
   power: (a, b) => Math.pow(a, b),
 };
 
-console.log(mathOperrational.add(1, 2));
-console.log(mathOperrational.power(2, 3));
+console.log(mathOperations.add(1, 2));
+console.log(mathOperations.power(2, 3));
 
 const eventHandlers = {};
 
@@ -37,7 +37,7 @@ trigger("login4", "Sue"); //doesn't exist
 function createUser(name, age) {
   return {
     greetUser: `Hello ${name}. Nice to meet you`,
-    wishHappyBirthday: `Happy birthday ${name}. You are ${age} years old`,
+    wishHappyBirthday: `Happy birthday ${name}. You are now ${age} years old`,
   };
 }
 
