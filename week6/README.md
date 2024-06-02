@@ -2,7 +2,7 @@
 
 ## About
 
-This is a collection of to help practice writing pure functions, closures, curried functions, and recursive functions.
+This is a collection of projects to help practice writing pure functions, closures, curried functions, and recursive functions.
 
 ## Installation
 
@@ -15,7 +15,7 @@ node filename.js
 example: node prime-shifting.js
 ```
 
-4. Every file has sample fuction with sample input to help you get started. You can chnage the input as desired
+4. Every file has sample fuction with sample input to help you get started. You can change the input as desired. At the top is the project problem definition and the procedure for solving
 
 ## Author
 

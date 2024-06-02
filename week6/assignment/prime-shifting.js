@@ -31,7 +31,7 @@ function getPrimeNumsRecursive(numArray, prime, maxNumber) {
     return numArray;
   }
   if (numArray.includes(prime)) {
-    let index = numArray.indexOf(prime);
+    const index = numArray.indexOf(prime);
     let i = index + 1;
     while (i < numArray.length) {
       //   console.log("index ", i, " for ", numArray, "dividing by ", prime);
@@ -49,6 +49,6 @@ function getPrimeNumsRecursive(numArray, prime, maxNumber) {
   }
 }
 
-const maxNumber = 100;
+const maxNumber = 10;
 const prime = 2; // prime will always begin from 2
 console.log(getPrimeNumsRecursive(getNumArray(maxNumber), prime, maxNumber));
