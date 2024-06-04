@@ -28,6 +28,22 @@ const feed = changeState("soil")(5);
 
 const hydrate = changeState("water")(6);
 
+const giveLight = changeState("light")(10);
+
+const namePlant = changeState("name")(
+  document.getElementById("plant-name").value
+);
+
+// const createPlant = (name) => {
+//   return (type) => {
+//     return () => {
+//       const newState = stateControl(changeState("name")(name));
+//       changeState("type")(type);
+//       return newState;
+//     };
+//   };
+// };
+
 window.onload = function () {
   // This function has side effects because we are manipulating the DOM.
   // Manipulating the DOM will always be a side effect.
@@ -60,4 +76,23 @@ window.onload = function () {
       "water-value"
     ).innerText = `Water: ${currentState.water}`;
   };
+
+  // create a plant
+};
+document.getElementById("create-plant").onclick = function () {
+  console.log(document.getElementById("plant-name").value);
+  stateControl(
+    changeState("name")(document.getElementById("plant-name").value)
+  );
+  const newState = stateControl(
+    changeState("type")(document.getElementById("plant-type").value)
+  );
+
+  document.getElementById(
+    "plant-name-value"
+  ).innerText = `Name: ${newState.name}`;
+
+  document.getElementById(
+    "plant-type-value"
+  ).innerText = `Type: ${newState.type}`;
 };

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link rel="stylesheet" href="./css/style.css">
     <title>Grow Your Plant</title>
   </head>
   <body>
     <button id="feed">Add soil</button>
     <button id="hydrate">Water the Plant</button>
-    <button id="show-state">Current Stats</button>
-    <h1>Your Plant's Values</h1>
-    <div id="soil-value"></div><div id="water-value"></div>
+    
+<!-- Create a plant -->
+    <h3><div>Create Your Plant</div></h3>
+    <div id="create-plant-id"><label for="plant-name">Plant's name</label> <input type="text" id="plant-name">
+      <label for="plant-type">Plant's type:</label> <input type="text" id="plant-type">
+      <button id="create-plant">Create Plant</button></div>
+    
+
+    <h3>Your Plant's Values</h3>
+    <div id="plant-name-value"></div><div id="plant-type-value"></div><div id="soil-value"></div><div id="water-value"></div>
     <script src="./src/index.js"></script>
   </body>
 </html>
