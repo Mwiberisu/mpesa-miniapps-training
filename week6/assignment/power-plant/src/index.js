@@ -24,11 +24,9 @@ const changeState = (prop) => {
 
 // We create four functions using our function factory.
 // We could easily create many more.
-const feed = changeState("soil")(1);
-const blueFood = changeState("soil")(5);
+const feed = changeState("soil")(5);
 
-const hydrate = changeState("water")(1);
-const superWater = changeState("water")(5);
+const hydrate = changeState("water")(6);
 
 window.onload = function () {
   // This function has side effects because we are manipulating the DOM.
@@ -36,8 +34,14 @@ window.onload = function () {
   // Note that we only use one of our functions to alter soil.
   // You can easily add more.
   document.getElementById("feed").onclick = function () {
-    const newState = stateControl(blueFood);
+    const newState = stateControl(feed);
     document.getElementById("soil-value").innerText = `Soil: ${newState.soil}`;
+  };
+  document.getElementById("hydrate").onclick = function () {
+    const newState = stateControl(hydrate);
+    document.getElementById(
+      "water-value"
+    ).innerText = `Water: ${newState.water}`;
   };
 
   // This function doesn't actually do anything useful in this application
@@ -52,5 +56,8 @@ window.onload = function () {
     document.getElementById(
       "soil-value"
     ).innerText = `Soil: ${currentState.soil}`;
+    document.getElementById(
+      "water-value"
+    ).innerText = `Water: ${currentState.water}`;
   };
 };
