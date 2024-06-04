@@ -31,24 +31,14 @@ function getPrimeNumsRecursive(numArray, prime, maxNumber) {
     return numArray;
   }
   if (numArray.includes(prime)) {
-    const index = numArray.indexOf(prime);
-    let i = index + 1;
-    while (i < numArray.length) {
-      //   console.log("index ", i, " for ", numArray, "dividing by ", prime);
-      //   if current value is a multiple of prime, remove it from the list
-      if (numArray[i] % prime == 0) {
-        numArray.splice(i, 1);
-        i = i;
-      } else {
-        i = i + 1;
-      }
-    }
+    numArray = numArray.filter((el) => el % prime != 0); //remove all multiples of prime
+    numArray.push(prime); //return prime to the array
     return getPrimeNumsRecursive(numArray, prime + 1, maxNumber);
   } else {
     return getPrimeNumsRecursive(numArray, prime + 1, maxNumber);
   }
 }
 
-const maxNumber = 10;
+const maxNumber = 100;
 const prime = 2; // prime will always begin from 2
 console.log(getPrimeNumsRecursive(getNumArray(maxNumber), prime, maxNumber));
